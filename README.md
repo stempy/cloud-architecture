@@ -1,6 +1,6 @@
-# How to build web applications with restlike api's in 2020
+# How to build web applications in 2020
 
-I created this because of the general lack of understanding when it comes to building web applications with rest like api's using  standard practices. There are basic concepts, such as components of a web application, api structures, design patterns.
+I created this because of the general lack of understanding when it comes to building web applications using standard practices in 2020. There are basic concepts, such as components of a web application, api structures, design patterns, rest api's, configuration, distributed micro-services. There is a lot of information out there often leading to overload, with this I am aiming to provide simple modern approaches to development, using best practices to help build scalable distributed applications. 
 
 ## Target Audience
 
