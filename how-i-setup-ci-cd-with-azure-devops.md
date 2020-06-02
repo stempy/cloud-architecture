@@ -17,7 +17,7 @@ We had the following project types:
 - NodeJS based frontends in Aurelia (similar to Angular though more conventions)
 - Azure WebJobs handling queues for generating long running reports, Converting to PDF, etc. Complex processes involved
 - Azure Serverless functions (to note, a cloud Email queue handler, other web job type scenarios)
-- Azure File(s) deployments for App Configurations  (appsettings across multiple environments to handle centralization of configuration across 7+ API's, console projects, windows services)
+- Azure File(s) deployments for App Configurations  (appsettings across multiple environments to handle centralization of configuration across 7+ API's, console projects, windows services), [read more](how-to-create-shared-configuration-using-azure.md)
 
 Visual Studio Team Services Build Agent
 -------------------------------------------
