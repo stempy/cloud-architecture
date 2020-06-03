@@ -26,6 +26,7 @@ I created this because of the general lack of understanding when it comes to bui
 
 Considerations such as configuration, deployment environments, authentication, shared libraries, scripts, and tasks.
 
+- How to create a simple authentication server for use across applications
 - [How to create shared configuration using Azure](how-to-create-shared-configuration-using-azure.md). Creating centralized configuration with Azure File(s) or Storage across multiple applications, apis, desktop, command line, server and client applications.
 - How to componentize API's
 
