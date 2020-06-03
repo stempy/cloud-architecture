@@ -18,6 +18,7 @@ I created this because of the general lack of understanding when it comes to bui
 
 ## Continuous Integration / Continuos Delivery
 
+- [What Azure DevOps provides for CI/CD](what-azure-devops-and-ci-provide.md)
 - [Prepare for Continuous Integration And Delivery](how-to-prepare-for-continuous-integration.md)
 - [How I setup Azure DevOps for CI/CD](how-i-setup-ci-cd-with-azure-devops.md) for multiple web applications, windows services, command line apps, azure serverless functions across different environments.
 
