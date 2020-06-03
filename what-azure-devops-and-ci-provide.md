@@ -16,6 +16,8 @@ Well Azure DevOps *properly* configured provides *visibility*.
 
 It shows at a glance, what, when and where something is deployed, and by *who*. You can also find the explicit logs and details of release and builds. NO more fumbling wondering what's where.
 
+Here is an example of release pipelines I setup for one project.
+
 ![Release Items](images/azure_devops_clientapps_releases.png)
 
 In addition, you can create notifications of releases, actually anything. An example of a slack notification I created was
@@ -31,6 +33,8 @@ What it provided was:
 - the build agent used to build the release, this could be a Virtual Machine, Desktop PC, or anything the build agent is running on.
 - The CD continuos delivery pipeline for the build/release
 - Source repository information such as branch and commit id for git
+
+This was consistent across all web applications, there were also other types of applications that provided a similar layout minus the web url's.
 
 I explain more in [How I setup CD/CD With Azure Devops](how-i-setup-ci-cd-with-azure-devops.md). Also there are a few things to consider for CI/CD itself [How to prepare for CI/CD](how-to-prepare-for-continuous-integration.md)
 
