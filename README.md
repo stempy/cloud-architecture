@@ -36,3 +36,6 @@ Considerations such as configuration, deployment environments, authentication, s
 - Database connections
 - Configuration
 
+## Releasing Products
+
+- [Semantic Versioning](semantic-versioning-projects.md)
