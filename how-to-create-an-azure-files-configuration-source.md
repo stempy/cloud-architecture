@@ -12,6 +12,8 @@ In this article, I will explain how I wrote a Configuration Provider and Configu
 - standard .NET Core conventions and practices. It should just work with the configuration system. This way it could be applied to any .NET Core project that uses standard conventions.
 - appsettings.json format, so file(s) were just uploaded at some point, manually via **Azure Storage Explorer** or other means, OR by some process. I actually created a git repository for all configs and set them up in the CI/CD pipeline to deploy.
 
+## The Process
+
 Now there were several parts to this:
 
 1. Connect to an Azure File(s) resource and obtain a list of config file(s) without the SDK's
@@ -27,4 +29,42 @@ now (3) the JSON parsing, as we were currently using ASP.NET Core 2.1, for the J
 
 (4) was relatively simple to apply once the others were done.
 
-More to come....
+## Wiring it up into apps
+
+Once the Azure file(s) configuration provider and source were created, now we want to create extension methods in .NET Core style, in this case we add extension methods for the configuration builder.
+
+```cs
+public static IConfigurationBuilder SetAzureFilesConfig(string storageAccount, string storageKey, string azureFilesConfigsPath);
+public static IConfigurationBuilder AddAzureFile(this IConfigurationBuilder builder, string azureFilesUri, bool isOptional);
+```
+
+this means we can create a ConfigurationBuilder like below to use azure as config, with local file overrides
+
+```cs
+        var configBuilder =new ConfigurationBuilder()
+                .SetBasePath(basePath)
+                .SetAzureConfig(configDetails.StorageAccount, configDetails.StorageKey, configDetails.ConfigsPath)
+                .AddAzureFile($"appsettings.json", true)
+                .AddAzureFile($"appsettings.{_environment}.json", true)
+                .AddJsonFile("appSettings.json", true)
+                .AddJsonFile($"appSettings.{_environment.ToLower()}.json", true)
+                .AddEnvironmentVariables()
+                .AddCommandLine(args);
+
+```
+
+or in a .NET Core 3.x+ app in *Program.cs* we can do.
+
+```cs
+        public static IHostBuilder CreateHostBuilder(string[] args) =>
+            Host.CreateDefaultBuilder(args)
+                .ConfigureAppConfiguration(builder =>
+                {
+                    builder.AddAzureFile("[http-path-to-azure-files-url]", true);
+                })
+                .ConfigureWebHostDefaults(webBuilder =>
+                {
+                    webBuilder.UseStartup<Startup>();
+                });
+```
+
