@@ -12,14 +12,16 @@ Developer tools:
 - SmartGit - another earlier git Gui's
 - TortoiseGit - early git based off TortoiseSVN
 
-## Editors
-
-**Essential Tools for any .NET Developer**
+## Essential Tools for any .NET Developer**
 
 - [Visual Studio Code](https://code.visualstudio.com/) - a powerhouse of a text editor hidden behind a clean simple U.I, uses Monaco as the core editor engine
 - [Visual Studio](https://visualstudio.microsoft.com/vs/) - .NET, .NET
 - [Resharper](https://www.jetbrains.com/resharper/) - for Visual Studio, manage codebases with ease. cleanup, refactor, apply best practices.
 - [LinqPad](https://www.linqpad.net/) V6+ .NET Core 3.x Scratchpad Swiss Army Utility Tool - Get Pro or better for intellisense, Nuget, and debugging.
+
+## Azure
+
+- [Azure Storage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/) 
 
 ## Other Tools
 
