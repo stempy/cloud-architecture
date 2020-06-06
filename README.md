@@ -44,7 +44,7 @@ Considerations such as configuration, deployment environments, authentication, s
 
 ### Scalable Utility Functions
 
-- Email sending as Azure functions
+- [Email sending as Azure functions](how-to-handle-email-at-scale.md)
 - HTML To PDF conversion using Chrome as a the PDF Renderer for accurate conversion.
 
 ## Considerations with Development vs Production Environments
