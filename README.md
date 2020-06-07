@@ -9,6 +9,7 @@ I created this because of the general lack of understanding when it comes to bui
 
 ## Application Basics
 
+- [Why standards,conventions and automation matters](why-standards-and-conventions-matter.md)
 - [Basic Components of a Web Application](basic-components-of-a-web-application.md)
 
 ## Rest basics
