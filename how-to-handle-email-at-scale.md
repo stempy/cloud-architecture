@@ -1,6 +1,8 @@
 # How to handle Email at scale
 
-Emails a simple thing, everyone uses it. Often in applications we just send an email as we need it directly via the SMTP servers which is great for simple scenarios where we only have a few emails, however there can sometimes be delays with contacting smtp servers and the like, so when you have an api for instance that sends an email after an operation is completed, it can delay the return result of the request, in effect making the user wait...... providing a slow user experience.
+Emails a simple thing, everyone uses it. Often in applications we just send an email as we need it directly via the SMTP servers which is great for simple scenarios where we only have a few emails, however there can sometimes be delays with contacting smtp servers and the like.
+
+When you have an api for instance that sends an email after an operation is completed, it can delay the return result of the request, in effect making the user wait...... providing a slow user experience.
 
 One way to improve this experience is to use Azure to offload the email sending to another cloud hosted service, or more specifically using Azure Queues with an Azure Function (or WebJob) to handle actual emailing, this way the api just adds an email to a queue, and they get processed and scaled as needed.
 
@@ -56,5 +58,9 @@ A contract for .NET.... This is based on ASP.NET Core's `IEmailSender`, without 
 ```
 
 ** Alternatives **
-This is by no means the only way to do it, we could easily store the emails and attachments in a datastore of some sort such as mongodb, sql, redis-cache. And in some ways this is nicer as attachments are directly encapsulated with the email metadata as one package, and than we could use Azure Queue to just provide an `id` to the data-record, and keep email for long-term storage, an archive, the only issue with this is storing binaries in a database can quickly explode the size of it. Again azure blobs come in handy for long-term binary storage of the attachments, with meta data stored in a quick lookup type table of some sort. The key point is separating actual sending of emails from the applications.
+This is by no means the only way to do it, we could easily store the emails and attachments in a datastore of some sort such as mongodb, sql, redis-cache. 
+
+And in some ways this is nicer as attachments are directly encapsulated with the email metadata as one package, and than we could use Azure Queue to just provide an `id` to the data-record, and keep email for long-term storage, an archive, the only issue with this is storing binaries in a database can quickly explode the size of it. 
+
+Again azure blobs come in handy for long-term binary storage of the attachments, with meta data stored in a quick lookup type table of some sort. The key point is separating actual sending of emails from the applications.
 
