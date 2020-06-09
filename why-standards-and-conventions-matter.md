@@ -75,4 +75,14 @@ Now OpenAPI/Swagger standards allow us to:
 - *Automatically* generate client model classes and interfaces from a Swagger json output. This alone can virtually eliminate the need to hand-code, hand-update model classes for requests and responses. Which scales in time duration according to the number of models. Have 100 models, these can be re-generated on the fly from swagger. Without swagger it's all updating each one by hand.
 - *Import directly* into tools like *postman* for API testing. 
 
+# Automation
+
+Now this goes back to the early days of programming, after all a program is a series of steps to automate something.
+
+A well-crafted software development process is automated whereever possible. Some of the benefits it brings are:
+
+- Less human input, which reduces human error (we are all prone to mistakes)
+- less tedious tasks
+- consistent, repeatable actions
+
 8/6/2020 more to come....
