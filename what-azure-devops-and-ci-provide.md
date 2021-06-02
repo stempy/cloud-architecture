@@ -16,14 +16,6 @@ Well Azure DevOps *properly* configured provides *visibility*.
 
 It shows at a glance, what, when and where something is deployed, and by *who*. You can also find the explicit logs and details of release and builds. NO more fumbling wondering what's where.
 
-Here is an example of release pipelines I setup for one project.
-
-![Release Items](images/azure_devops_clientapps_releases.png)
-
-In addition, you can create notifications of releases, actually anything. An example of a slack notification I created was
-
-![Slack Release notification](images/slack_web_release_notification.jpg)
-
 What it provided was:
 - the release name, and web link url to the azure devops release page
 - the environment `[dev]`
