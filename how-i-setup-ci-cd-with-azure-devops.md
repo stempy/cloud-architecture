@@ -4,8 +4,6 @@ Setting up Azure DevOps (formely known as VSTS - *Visual Studio Team Services*) 
 
 In Azure DevOps, Builds and Releases are separated to follow the C.I / C.D processes, this works well with a **Build Once, Deploy Anywhere** strategy that is a principle of CI/CD.
 
-![Release Items](images/azure_devops_clientapps_releases.png)
-
 We had the following project types:
 
 - Legacy .NET Framework Web Services (SOAP WSDL's .NET.3.5 - 4.5)
